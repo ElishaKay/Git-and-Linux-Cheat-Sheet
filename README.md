@@ -1,4 +1,4 @@
-Viewing Branches of a Cloned Repository:
+<h3>Viewing Branches of a Cloned Repository:</h3>
 
 When you clone a repository, run:
 
@@ -32,7 +32,7 @@ Shablam. You're now viewing that branch on your local machine! nice.
 Source: https://gist.github.com/fabianmoronzirfas/4023446
 
 --------------------------------------------------
-Resolving git merge conflicts:
+<h3>Resolving git merge conflicts:</h3>
 
 git fetch origin
 git pull origin master
@@ -48,20 +48,21 @@ Important Git Note: When you git push force to the master branch, it will annihi
 
 
 ------------------------------
-Reset all changes after last commit in git:
+<h3>Reset all changes after last commit in git:</h3>
 
 First reset the changes
-
+```
 git reset HEAD --hard
+```
 then clean out everything untracked. If you want to keep files that are not tracked due to .gitignore, be careful with this command.
 
 git clean -fd
 
 -------------
-When you commit to any git "message" screen, just press: 
-
+<h3>When you commit to any git "message" screen, just press: </h3>
+```
 Ctrl-X
-
+```
 To save and exit.
 
 "You can use the --no-edit flag to avoid this behavior, but, well, don't. 
@@ -140,7 +141,7 @@ git checkout -b branchname <sha1-of-commit or HEAD~3>
 
 ----------------------------------------------------------------------------
 
-To return the repo (on master) to a previous commit
+<h3>To return the repo (on master) to a previous commit</h3>
 
 The "Already up-to-date" message shows up when the HEAD of the branch you are merging into is a parent of the chain of commits of the branch you want to merge. That's the case, here: D is a parent of E.
 
