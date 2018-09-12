@@ -33,9 +33,10 @@ Source: https://gist.github.com/fabianmoronzirfas/4023446
 
 --------------------------------------------------
 <h3>Resolving git merge conflicts:</h3>
-
+```
 git fetch origin
 git pull origin master
+```
 
 These 2 commands will pull changes from master into the branch you want to commit. You can then fix things up in your local repo and 
 recommit to the branch you want to push
@@ -56,8 +57,9 @@ git reset HEAD --hard
 ```
 then clean out everything untracked. If you want to keep files that are not tracked due to .gitignore, be careful with this command.
 
+```
 git clean -fd
-
+```
 -------------
 <h3>When you commit to any git "message" screen, just press: </h3>
 ```
@@ -68,10 +70,10 @@ To save and exit.
 "You can use the --no-edit flag to avoid this behavior, but, well, don't. 
 Merge commits, like any commits to history, should be well constructed. Your history should be nothing but useful."
 
---------------
-
+-------------------------------------
+```
 git stash apply
-
+```
 --> retreives the changes that were in place when you typed 'git stash'
 
 
@@ -79,18 +81,25 @@ git stash apply
 
 When trying to solve a merge conflict, it could be that you want to reset your current branch to a previous commit.
 
-First run: git log
+First run: 
+```
+git log
+```
 
 This will show you all of your latest commits. Find the hash of the commit you want to revert back to. Then run:
 
+```
 git reset --hard 81e08967b2dfbfef09d62ca9e372c47dfba927db
+```
 
 The BEST METHOD to overwrite master with the your latest branch. Let's say you have a branch named "showing_images_in_div_branch".
 This branch has the neccessary repo - in its entirety. You dont care about ANYTHING within the master branch!
 
 When you're on the branch called "showing_images_in_div_branch"
 
+```
 git merge master --strategy=ours
+```
 
 This allows you to merge to master while automatically choosing to overwrite master files with branch
 
@@ -125,24 +134,33 @@ If you want to access an earlier version of  a repo created by someone else:
 
 a) Clone the repo
 
-b) run:   git log --pretty=format:"%h %s" --graph
+b) run: 
+
+```
+git log --pretty=format:"%h %s" --graph
+```
 
 You can hold down the enter key in order to scroll down all the commit history (only shows one line per commit :)
 
 c) You now need to create a Branch from a previous commit. You can create the branch via the commit's hash:
 
+```
 git branch branchname <sha1-of-commit>
+```
 
 Next, just checkout the branch by running: git checkout branchnam
 
 OR, you can checkout the branch when creating it, using:
 
+```
 git checkout -b branchname <sha1-of-commit or HEAD~3>
-
+```
 ----------------------------------------------------------------------------
 
 <h3>To return the repo (on master) to a previous commit</h3>
 
 The "Already up-to-date" message shows up when the HEAD of the branch you are merging into is a parent of the chain of commits of the branch you want to merge. That's the case, here: D is a parent of E.
 
+```
 git reset --hard H (h is the hash of the former branch you want to restore)
+```
