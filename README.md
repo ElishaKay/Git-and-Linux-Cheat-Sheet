@@ -1,4 +1,37 @@
+Viewing Branches of a Cloned Repository:
 
+When you clone a repository, run:
+
+```
+git branch -a
+```
+
+This will show you all the branches from the remote repo (hidden on your own computer).
+
+The output may look something like this:
+
+```
+master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/lecture/060
+  remotes/origin/lecture/066
+  remotes/origin/lecture/068
+  remotes/origin/lecture/069
+  remotes/origin/lecture/070
+  remotes/origin/lecture/072
+  remotes/origin/lecture/073
+```
+
+To view one of these branches on your local machine, simply discard the word 'remotes/'. Instead, just run something like this.
+
+```
+git checkout origin/lecture/121
+```
+Shablam. You're now viewing that branch on your local machine! nice.
+
+Source: https://gist.github.com/fabianmoronzirfas/4023446
+
+--------------------------------------------------
 Resolving git merge conflicts:
 
 git fetch origin
