@@ -1,3 +1,13 @@
+<h3>Deploying / Re-deploying to Heroku</h3>
+
+- You can only push to Heroku via the Master branch, therefore, you must merge your changes for the latest working branch into the Master branch before deployment.
+
+```
+git checkout master
+git merge latest-branch
+git push heroku master
+```
+
 <h3>Viewing Branches of a Cloned Repository:</h3>
 
 When you clone a repository, run:
