@@ -1,3 +1,18 @@
+<h3>How to replace master branch in Git, entirely, from another branch</h3>
+
+You should be able to use the "ours" merge strategy to overwrite master with seotweaks like this:
+
+```
+git checkout seotweaks
+git merge -s ours master
+git checkout master
+git merge seotweaks
+The result should be your master is now essentially seotweaks.
+
+```
+(-s ours is short for --strategy=ours)
+
+
 <h3>Deploying / Re-deploying to Heroku</h3>
 
 - You can only push to Heroku via the Master branch, therefore, you must merge your changes for the latest working branch into the Master branch before deployment.
