@@ -189,3 +189,17 @@ The "Already up-to-date" message shows up when the HEAD of the branch you are me
 ```
 git reset --hard H (h is the hash of the former branch you want to restore)
 ```
+
+---------------------------------
+
+<h3>Disable Sleep Mode on Ubuntu</h3>
+
+On Ubuntu 16.04 LTS, I successfully used the following to disable sleep mode:
+```
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+```
+
+And this to re-enable it:
+```
+sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target
+```
