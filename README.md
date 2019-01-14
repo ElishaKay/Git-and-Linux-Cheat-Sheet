@@ -1,3 +1,5 @@
+Save time with these helpful tips!
+
 <h3>How to replace master branch in Git, entirely, from another branch</h3>
 
 You should be able to use the "ours" merge strategy to overwrite master with seotweaks like this:
