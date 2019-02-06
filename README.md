@@ -1,5 +1,13 @@
 Save time with these helpful tips!
 
+<h3>How do I remove a big file wrongly committed in git?</h3>
+
+```
+git filter-branch --tree-filter 'rm -rf path/to/your/file' HEAD
+```
+source: https://stackoverflow.com/questions/8083282/how-do-i-remove-a-big-file-wrongly-committed-in-git
+
+
 <h3>How to replace master branch in Git, entirely, from another branch</h3>
 
 You should be able to use the "ours" merge strategy to overwrite master with seotweaks like this:
