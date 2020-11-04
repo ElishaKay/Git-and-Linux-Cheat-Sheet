@@ -60,7 +60,7 @@ master
 To view one of these branches on your local machine, simply discard the word 'remotes/'. Instead, just run something like this.
 
 ```
-git checkout origin/lecture/121
+git checkout remotes/origin/lecture/121
 ```
 Shablam. You're now viewing that branch on your local machine! nice.
 
