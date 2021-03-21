@@ -154,6 +154,11 @@ Start Xampp:
 
 sudo /opt/lampp/lampp start
 
+OR (if mysql is also installed separately on the machine)
+
+sudo service mysql stop
+sudo /opt/lampp/lampp start
+
 Stop Xampp:
 
 sudo /opt/lampp/lampp stop
